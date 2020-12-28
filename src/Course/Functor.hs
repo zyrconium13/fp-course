@@ -79,10 +79,17 @@ instance Functor Optional where
 instance Functor ((->) t) where
   (<$>) ::
     (a -> b)
-    -> ((->) t a)
-    -> ((->) t b)
-  (<$>) =
-    error "todo: Course.Functor (<$>)#((->) t)"
+    -> (->) t a
+    -> (->) t b
+  (<$>) f g = f . g
+
+-- | Alternative syntax.
+-- instance Functor ((->) t) where
+--   (<$>) ::
+--     (a -> b) ->
+--     (t -> a) ->
+--     (t -> b)
+--   (<$>) f g = f . g $
 
 -- | Anonymous map. Maps a constant value on a functor.
 --
