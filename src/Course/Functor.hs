@@ -123,10 +123,10 @@ instance Functor ((->) t) where
 -- ()
 void ::
   Functor k =>
-  k a
-  -> k ()
-void =
-  error "todo: Course.Functor#void"
+  k a ->
+  k ()
+-- void = (<$>) . const $ ()
+void = (<$) ()
 
 -----------------------
 -- SUPPORT LIBRARIES --
