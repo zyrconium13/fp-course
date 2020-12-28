@@ -104,8 +104,9 @@ instance Functor ((->) t) where
   a
   -> k b
   -> k a
-(<$) =
-  error "todo: Course.Functor#(<$)"
+-- (<$) x f = const x <$> f -- ETA reduce on f: (<$>) moves from infix to prefix and composes with const
+-- (<$) x = (<$>) . const $ x - ETA reduce on x
+(<$) = (<$>) . const
 
 -- | Anonymous map producing unit value.
 --
