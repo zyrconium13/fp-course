@@ -46,16 +46,14 @@ infixl 4 <*>
 -- ExactlyOne 18
 instance Applicative ExactlyOne where
   pure ::
-    a
-    -> ExactlyOne a
-  pure =
-    error "todo: Course.Applicative pure#instance ExactlyOne"
+    a ->
+    ExactlyOne a
+  pure = ExactlyOne
   (<*>) ::
-    ExactlyOne (a -> b)
-    -> ExactlyOne a
-    -> ExactlyOne b
-  (<*>) =
-    error "todo: Course.Applicative (<*>)#instance ExactlyOne"
+    ExactlyOne (a -> b) ->
+    ExactlyOne a ->
+    ExactlyOne b
+  (<*>) (ExactlyOne f) (ExactlyOne x) = ExactlyOne (f x)
 
 -- | Insert into a List.
 --
