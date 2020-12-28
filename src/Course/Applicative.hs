@@ -63,16 +63,17 @@ instance Applicative ExactlyOne where
 -- [2,3,4,2,4,6]
 instance Applicative List where
   pure ::
-    a
-    -> List a
-  pure =
-    error "todo: Course.Applicative pure#instance List"
+    a ->
+    List a
+  pure = (:. Nil)
   (<*>) ::
-    List (a -> b)
-    -> List a
-    -> List b
-  (<*>) =
-    error "todo: Course.Apply (<*>)#instance List"
+    List (a -> b) ->
+    List a ->
+    List b
+  -- (<*>) fs xs = foldLeft (\acc f -> acc ++ map f xs) Nil fs
+  -- (<*>) fs xs = flatten $ map (`map` xs) fs
+  -- f <*> a = flatMap (`map` a) f
+  (<*>) fs xs = flatMap (`map` xs) fs
 
 -- | Insert into an Optional.
 --
