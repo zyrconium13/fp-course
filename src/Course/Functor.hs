@@ -66,11 +66,11 @@ instance Functor List where
 -- Full 3
 instance Functor Optional where
   (<$>) ::
-    (a -> b)
-    -> Optional a
-    -> Optional b
-  (<$>) =
-    error "todo: Course.Functor (<$>)#instance Optional"
+    (a -> b) ->
+    Optional a ->
+    Optional b
+  (<$>) _ Empty = Empty
+  (<$>) f (Full x) = Full (f x)
 
 -- | Maps a function on the reader ((->) t) functor.
 --
