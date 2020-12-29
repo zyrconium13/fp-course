@@ -187,13 +187,12 @@ lift2 f k1 = (<*>) (f <$> k1)
 -- 138
 lift3 ::
   Applicative k =>
-  (a -> b -> c -> d)
-  -> k a
-  -> k b
-  -> k c
-  -> k d
-lift3 =
-  error "todo: Course.Applicative#lift3"
+  (a -> b -> c -> d) ->
+  k a ->
+  k b ->
+  k c ->
+  k d
+lift3 f k1 k2 k3 = lift2 f k1 k2 <*> k3
 
 -- | Apply a quaternary function in the environment.
 -- /can be written using `lift3` and `(<*>)`./
@@ -220,14 +219,13 @@ lift3 =
 -- 148
 lift4 ::
   Applicative k =>
-  (a -> b -> c -> d -> e)
-  -> k a
-  -> k b
-  -> k c
-  -> k d
-  -> k e
-lift4 =
-  error "todo: Course.Applicative#lift4"
+  (a -> b -> c -> d -> e) ->
+  k a ->
+  k b ->
+  k c ->
+  k d ->
+  k e
+lift4 f k1 k2 k3 k4 = lift3 f k1 k2 k3 <*> k4
 
 -- | Apply a nullary function in the environment.
 lift0 ::
