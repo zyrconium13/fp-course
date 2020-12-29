@@ -230,10 +230,9 @@ lift4 f k1 k2 k3 k4 = lift3 f k1 k2 k3 <*> k4
 -- | Apply a nullary function in the environment.
 lift0 ::
   Applicative k =>
-  a
-  -> k a
-lift0 =
-  error "todo: Course.Applicative#lift0"
+  a ->
+  k a
+lift0 = pure
 
 -- | Apply a unary function in the environment.
 -- /can be written using `lift0` and `(<*>)`./
@@ -248,11 +247,13 @@ lift0 =
 -- [2,3,4]
 lift1 ::
   Applicative k =>
-  (a -> b)
-  -> k a
-  -> k b
-lift1 =
-  error "todo: Course.Applicative#lift1"
+  (a -> b) ->
+  k a ->
+  k b
+-- lift1 f k = f <$> k
+-- lift1 f k = (<$>) f k -- this can be ETA reduced
+-- lift1 = <$>
+lift1 f k = lift0 f <*> k
 
 -- | Apply, discarding the value of the first argument.
 -- Pronounced, right apply.
