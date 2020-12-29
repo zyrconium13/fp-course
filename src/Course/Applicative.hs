@@ -155,8 +155,12 @@ lift2 ::
   -> k a
   -> k b
   -> k c
-lift2 =
-  error "todo: Course.Applicative#lift2"
+-- ideal form:
+-- lift2 = ((<*>) .) . (<$>)
+--
+-- lift2 f k1 k2 = f <$> k1 <*> k2
+-- lift2 f k1 k2 = (<*>) (f <$> k1) k2 -- this can be ETA reduced
+lift2 f k1 = (<*>) (f <$> k1)
 
 -- | Apply a ternary function in the environment.
 -- /can be written using `lift2` and `(<*>)`./
