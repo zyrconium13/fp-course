@@ -331,10 +331,12 @@ lift1 f k = lift0 f <*> k
 -- [60,8]
 sequence ::
   Applicative k =>
-  List (k a)
-  -> k (List a)
-sequence =
-  error "todo: Course.Applicative#sequence"
+  List (k a) ->
+  k (List a)
+-- sequence Nil = pure Nil
+-- sequence = foldRight (\ e a -> (:.) <$> e <*> a) (pure Nil)
+-- sequence = foldRight (\ e a -> lift2 (:.) e a) (pure Nil)
+sequence = foldRight (lift2 (:.)) (pure Nil)
 
 -- | Replicate an effect a given number of times.
 --
