@@ -60,7 +60,7 @@ import           Course.Comonad     (copure)
 import           Course.Core
 import           Course.Extend      ((<<=))
 import           Course.Functor     ((<$>))
-import           Course.List        (List ((:.), Nil), all, isEmpty, take)
+import           Course.ListZ        (List ((:.), Nil), all, isEmpty, take)
 import           Course.ListZipper  (ListZipper (ListZipper),
                                      MaybeListZipper (..), deletePullLeft,
                                      deletePullRight, dropLefts, dropRights,

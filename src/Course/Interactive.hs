@@ -9,7 +9,7 @@ import Course.Functor
 import Course.Applicative
 import Course.Monad
 import Course.Traversable
-import Course.List
+import Course.ListZ
 import Course.Optional
 
 -- | Eliminates any value over which a functor is defined.

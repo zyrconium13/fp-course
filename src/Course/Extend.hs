@@ -6,7 +6,7 @@ module Course.Extend where
 
 import Course.Core
 import Course.ExactlyOne
-import Course.List
+import Course.ListZ
 import Course.Optional
 import Course.Functor
 

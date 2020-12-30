@@ -41,7 +41,7 @@ import           Test.Framework     (TestTree, assertBool, testCase,
 import           Course.Applicative (pure, (*>), (<*>))
 import           Course.Core
 import           Course.Functor     ((<$>))
-import           Course.List        (List ((:.), Nil))
+import           Course.ListZ       (List ((:.), Nil))
 import           Course.Monad       ((=<<))
 import           Course.Optional    (Optional (Full))
 import           Course.Parser

@@ -25,7 +25,7 @@ import           Course.Core
 import           Course.JsonParser (jsonArray, jsonFalse, jsonNull, jsonNumber,
                                     jsonObject, jsonString, jsonTrue, jsonValue)
 import           Course.JsonValue  (JsonValue (JsonArray, JsonFalse, JsonNull, JsonObject, JsonRational, JsonString, JsonTrue))
-import           Course.List       (List ((:.), Nil))
+import           Course.ListZ       (List ((:.), Nil))
 import           Course.Parser     (ParseResult (Result), isErrorResult, parse)
 
 test_JsonParser :: TestTree

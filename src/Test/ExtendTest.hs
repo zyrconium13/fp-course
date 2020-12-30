@@ -17,7 +17,7 @@ module Test.ExtendTest (
 import           Course.Core
 import           Course.ExactlyOne (ExactlyOne (ExactlyOne))
 import           Course.Functor    ((<$>))
-import           Course.List       (List ((:.), Nil), length, listh, reverse)
+import           Course.ListZ       (List ((:.), Nil), length, listh, reverse)
 import           Course.Optional   (Optional (Empty, Full))
 
 import           Course.Extend     (cojoin, (<<=))

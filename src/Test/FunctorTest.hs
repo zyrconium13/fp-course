@@ -23,7 +23,7 @@ import           Test.Framework    (TestTree, testCase, testGroup,
 import           Course.Core
 import           Course.ExactlyOne (ExactlyOne (ExactlyOne))
 import           Course.Functor    (void, (<$), (<$>))
-import           Course.List       (List ((:.), Nil))
+import           Course.ListZ       (List ((:.), Nil))
 import           Course.Optional   (Optional (Empty, Full))
 
 test_Functor :: TestTree

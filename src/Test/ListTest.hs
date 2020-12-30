@@ -31,7 +31,7 @@ import           Test.Framework   (TestTree, testCase, testGroup,
                                    testProperty, test, (@?=))
 
 import           Course.Core
-import           Course.List      (List ((:.), Nil), filter, find, flatMap,
+import           Course.ListZ      (List ((:.), Nil), filter, find, flatMap,
                                    flatten, flattenAgain, foldLeft, headOr,
                                    hlist, infinity, largeList, length,
                                    lengthGT4, listh, map, produce, product,

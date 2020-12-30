@@ -18,7 +18,7 @@ import Course.Functor as X
 import Course.Interactive as X
 import Course.JsonParser as X
 import Course.JsonValue as X
-import Course.List as X
+import Course.ListZ as X
 import Course.ListZipper as X
 import Course.Monad as X
 import Course.MoreParser as X

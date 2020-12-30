@@ -9,7 +9,7 @@ import Course.Applicative
 import Course.Core
 import Course.ExactlyOne
 import Course.Functor
-import Course.List
+import Course.ListZ
 import Course.Optional
 import qualified Prelude as P((=<<))
 

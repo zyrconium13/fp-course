@@ -69,7 +69,7 @@ library
                       Course.Interactive
                       Course.JsonParser
                       Course.JsonValue
-                      Course.List
+                      Course.ListZ
                       Course.ListZipper
                       Course.Monad
                       Course.MoreParser

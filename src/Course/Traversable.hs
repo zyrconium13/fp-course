@@ -7,7 +7,7 @@ module Course.Traversable where
 import Course.Core
 import Course.Functor
 import Course.Applicative
-import Course.List
+import Course.ListZ
 import Course.ExactlyOne
 import Course.Optional
 import Course.Compose

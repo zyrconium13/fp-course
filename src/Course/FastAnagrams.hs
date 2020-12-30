@@ -4,7 +4,7 @@
 module Course.FastAnagrams where
 
 import Course.Core
-import Course.List
+import Course.ListZ
 import Course.Functor
 import qualified Data.Set as S
 

@@ -8,7 +8,7 @@ module Course.Alternative where
 import Course.Applicative
 import Course.Core
 import Course.Functor
-import Course.List
+import Course.ListZ
 import Course.Optional
 import Course.Parser
 import qualified Prelude as P(fmap, return, (>>=))

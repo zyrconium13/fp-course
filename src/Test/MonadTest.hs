@@ -22,7 +22,7 @@ import           Test.Framework    (TestTree, testCase, testGroup, test, (@?=))
 
 import           Course.Core
 import           Course.ExactlyOne (ExactlyOne (..))
-import           Course.List       (List (..))
+import           Course.ListZ       (List (..))
 import           Course.Monad      (join, (<**>), (<=<), (=<<), (>>=))
 import           Course.Optional   (Optional (..))
 

@@ -8,7 +8,7 @@ module Course.State where
 import Course.Core
 import qualified Prelude as P
 import Course.Optional
-import Course.List
+import Course.ListZ
 import Course.Functor
 import Course.Applicative
 import Course.Monad

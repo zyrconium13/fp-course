@@ -41,7 +41,7 @@ import           Course.Applicative (pure, (<*>))
 import           Course.Core
 import           Course.ExactlyOne  (ExactlyOne (ExactlyOne))
 import           Course.Functor     ((<$>))
-import           Course.List        (List ((:.), Nil), flatMap, listh)
+import           Course.ListZ       (List ((:.), Nil), flatMap, listh)
 import           Course.Monad       ((=<<), (>>=))
 import           Course.Optional    (Optional (Empty, Full))
 import           Course.State       (put, runState)

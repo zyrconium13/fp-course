@@ -4,7 +4,7 @@
 module Course.ListZipper where
 
 import Course.Core
-import Course.List
+import Course.ListZ
 import Course.Optional
 import Course.Functor
 import Course.Applicative

@@ -12,7 +12,7 @@ module Test.Framework.Property where
 import           Prelude
 
 import           Control.Monad
-import           Course.List (List, listh)
+import           Course.ListZ (List, listh)
 import           Course.ListZipper (ListZipper(..))
 import           Course.Validation (Validation(..))
 import           Data.Bool
@@ -52,7 +52,7 @@ sized :: Integral i => (i -> Gen a) -> Gen a
 sized f = Gen $ \size gen -> runGen (f $ fromIntegral size) size gen
 
 frequency :: [(Int, Gen a)] -> Gen a
-frequency xs = 
+frequency xs =
   let tot = sum (fst <$> xs)
       pick n ((k,x):xs)
         | n <= k    = x

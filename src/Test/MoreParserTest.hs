@@ -35,7 +35,7 @@ import           Test.Framework    (TestTree, assertBool, testCase,
                                     testGroup, test, (@?=))
 
 import           Course.Core
-import           Course.List       (List ((:.), Nil))
+import           Course.ListZ       (List ((:.), Nil))
 import           Course.MoreParser (between, betweenCharTok, betweenSepbyComma,
                                     charTok, commaTok, digits1, eof, hex, hexu,
                                     noneof, oneof, option, quote, satisfyAll,

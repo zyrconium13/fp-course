@@ -9,7 +9,7 @@ import Course.Core
 import Course.Applicative
 import Course.Monad
 import Course.Functor
-import Course.List
+import Course.ListZ
 
 {-
 

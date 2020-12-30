@@ -32,7 +32,7 @@ import           Test.Framework.Property (Unshowable(..))
 import           Course.Applicative (pure, (<*>))
 import           Course.Core
 import           Course.Functor     ((<$>))
-import           Course.List        (List (..), filter, flatMap, hlist, length,
+import           Course.ListZ       (List (..), filter, flatMap, hlist, length,
                                      listh, span, (++))
 import           Course.Monad
 import           Course.Optional    (Optional (Empty, Full))

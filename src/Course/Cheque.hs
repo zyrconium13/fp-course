@@ -21,7 +21,7 @@ module Course.Cheque where
 
 import Course.Core
 import Course.Optional
-import Course.List
+import Course.ListZ
 import Course.Functor
 import Course.Applicative
 import Course.Monad

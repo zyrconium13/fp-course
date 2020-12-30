@@ -4,7 +4,7 @@
 module Course.JsonValue where
 
 import Course.Core
-import Course.List
+import Course.ListZ
 
 type Assoc = List (Chars, JsonValue)
 

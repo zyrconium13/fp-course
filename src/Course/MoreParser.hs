@@ -7,7 +7,7 @@ module Course.MoreParser where
 
 import Course.Core
 import Course.Parser
-import Course.List
+import Course.ListZ
 import Course.Optional
 import Course.Applicative
 import Course.Monad

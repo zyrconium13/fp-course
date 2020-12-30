@@ -7,7 +7,7 @@ module Course.Functor where
 import Course.Core
 import Course.ExactlyOne
 import Course.Optional
-import Course.List
+import Course.ListZ
 import qualified Prelude as P(fmap)
 
 -- | All instances of the `Functor` type-class must satisfy two laws. These laws

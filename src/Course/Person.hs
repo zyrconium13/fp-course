@@ -4,7 +4,7 @@
 module Course.Person where
 
 import Course.Core
-import Course.List
+import Course.ListZ
 
 -- Suppose we have a data structure to represent a person. The person data structure has these attributes:
 --     * Age: positive integer
