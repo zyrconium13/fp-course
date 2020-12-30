@@ -358,11 +358,13 @@ sequence = foldRight (lift2 (:.)) (pure Nil)
 -- ["aaa","aab","aac","aba","abb","abc","aca","acb","acc","baa","bab","bac","bba","bbb","bbc","bca","bcb","bcc","caa","cab","cac","cba","cbb","cbc","cca","ccb","ccc"]
 replicateA ::
   Applicative k =>
-  Int
-  -> k a
-  -> k (List a)
-replicateA =
-  error "todo: Course.Applicative#replicateA"
+  Int ->
+  k a ->
+  k (List a)
+-- replicateA n k = sequence $ replicate n k
+-- replicateA n = sequence . replicate n
+-- replicateA n = (sequence .) . replicate $ n
+replicateA = (sequence .) . replicate
 
 -- | Filter a list with a predicate that produces an effect.
 --
