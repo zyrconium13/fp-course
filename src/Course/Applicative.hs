@@ -305,11 +305,13 @@ lift1 f k = lift0 f <*> k
 -- prop> \x y -> Full x <* Full y == Full x
 (<*) ::
   Applicative k =>
+  k b ->
+  k a ->
   k b
-  -> k a
-  -> k b
-(<*) =
-  error "todo: Course.Applicative#(<*)"
+-- (<*) k1 k2 = ((\x -> (\_ -> x)) <$> k1) <*> k2
+-- (<*) k1 k2 = ((\x -> const x) <$> k1) <*> k2
+-- (<*) k1 k2 = const <$> k1 <*> k2
+(<*) = lift2 const
 
 -- | Sequences a list of structures to a structure of list.
 --
