@@ -275,11 +275,15 @@ lift1 f k = lift0 f <*> k
 -- prop> \x y -> Full x *> Full y == Full y
 (*>) ::
   Applicative k =>
-  k a
-  -> k b
-  -> k b
-(*>) =
-  error "todo: Course.Applicative#(*>)"
+  k a ->
+  k b ->
+  k b
+-- (*>) k1 k2 = do
+--   _ <- k1
+--   x <- k2
+--   pure x
+-- (*>) k1 k2 = ((\_ -> (\x -> x)) <$> k1) <*> k2
+(*>) = lift2 (const id)
 
 -- | Apply, discarding the value of the second argument.
 -- Pronounced, left apply.
