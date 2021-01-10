@@ -388,11 +388,10 @@ replicateA = (sequence .) . replicate
 --
 filtering ::
   Applicative k =>
-  (a -> k Bool)
-  -> List a
-  -> k (List a)
-filtering =
-  error "todo: Course.Applicative#filtering"
+  (a -> k Bool) ->
+  List a ->
+  k (List a)
+filtering p = foldRight (\a -> lift2 (\b -> if b then (a :.) else id) (p a)) (pure Nil)
 
 -----------------------
 -- SUPPORT LIBRARIES --
