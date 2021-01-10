@@ -35,7 +35,7 @@ import           Course.Applicative (filtering, lift1, lift2, lift3, lift4,
 import           Course.Core
 import           Course.ExactlyOne  (ExactlyOne (ExactlyOne))
 import           Course.Functor     ((<$>))
-import           Course.List        (List ((:.), Nil), filter, length, listh,
+import           Course.ListZ       (List ((:.), Nil), filter, length, listh,
                                      product, sum)
 import           Course.Optional    (Optional (Empty, Full))
 
